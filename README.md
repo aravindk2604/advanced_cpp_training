@@ -8,7 +8,8 @@ Concepts covered in advanced C++
 * Lambdas  
 * Functors  
 
+  
+A detailed list of the points discussed is located at `docs/experience_notes.md`  
+
 #### TODO
-- [ ] list remaining concepts  
 - [ ] short examples for every concept with syntax  
-- [ ] list the `experience notes` in a separate markdown  
