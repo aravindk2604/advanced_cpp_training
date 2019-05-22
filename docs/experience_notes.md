@@ -27,11 +27,39 @@ This works for arrays as well and not just STL containers
 * Implement `output operator` and `initializer list` early when writing a class
 * `Function Overloads` are picked over `template specializations`
 * `Move semantics` can bring in insecurities in code when `lvalue` which was originally an `rvalue`, becomes an `xvalue`
-* `valgrind` is a memory leak checker run in terminal
+* `valgrind` is a memory leak checker that is run in terminal
 * `const lvalue` accepts everything, therefore work with `non-const lvalue`
 * A `std::move operation` should ensure to return the state of the object to when it was initialized by the default ctor
 
 #### Day 2
+* Even when reference is used, compilers these days might optimize and make it a copy  
+* References are `OK` for primitive datatypes  
+* Refernces are `best` used for large containers  
+* Passing by value is not much of a concern with today's compilers  
+* Use `delete` for templated overload of class methods to avoid implicit conversion and also to deny lvalue or rvalue respectively  
+* `std::forward` saves a lot of function overloads  
+* Almost every abstraction in C++ comes without overhead  
+* Unfortunately `std::forward` is not variadic  
+* `const` makes your code safer and faster  
+* A function is implicitly convertable to a pointer to itself  
+* From `C++11` you can import constructors from base class with `using` keyword  
+* It is not recommended to use `mutable` in lambdas  
+* Use `this` keyword inside `[ ]` to capture class variables for lambdas inside a class  
+* `C++14` provides type deduction in lamdas  
+* Unique pointer has no copy constructor  
+* `DOUBLE STALE REFERENCE` is a lambda referencing a unique pointer and this is in a return statement  
+* Another reason why we could choose `pre-increment` over `post-increment` in a `for` loop is that we first use the value in the current iteration and then increment it which means we never look at that value for that iteration and thus it is a wastage of an operation. `++i` over `i++`  
+* What datatypes can we use inside templates - bool, int, pointers, auto  
+* What datatypes to avoid inside templates - floating point, user-dafined datatypes  
+* [Compiler Explorer godbolt.org](www.godbolt.org) <www.godbolt.org> can demangle names  
+* Constexpr functions can only call other Constexpr functions  
+* `sqrt` is a constexpr in gcc but not on clang and visual studio  
+* `static const` is always known at compile time  
+* Binary representation of a number can be separated into four bits by apostrophe for readability  
+* `ceil` and `sqrt` are not constexpr in clang  
+* `const * int` in C++17 works
+* `type_traits` does not apply to derived classes in C++98  
+* Functions declared inside class are inline  
 
 #### Day 3
 * Move semantics must ensure that the data structure is emptied after the move operation  
