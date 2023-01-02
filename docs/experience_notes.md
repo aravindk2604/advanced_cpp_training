@@ -2,7 +2,7 @@
 This is a gist of the important points that was discussed in this three day training conducted by Dr. Peter Gottschling.
 
 #### Day 1
-* It is good practice to compile your code with multiple compilers and analyse the subtle differences  
+* It is good practice to compile your code with multiple compilers and analyse the subtle differences. And this right here is something that can distinguish between a Junior and a Senior Dev.   
 * Any kind of conversion (implicit or explicit) in the code is better if avoided  
 * `Ternary operator` can be used in the assignment operation but `if statement` cannot be used  
 * C-style cast is a brutal way of casting. Do Not Use  
